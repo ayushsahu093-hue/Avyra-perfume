@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,400&amp;family=Manrope:wght@200;300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#efe1c6",
+                        "on-primary-fixed-variant": "#394d14",
+                        "primary-fixed": "#d2eca2",
+                        "tertiary": "#544b37",
+                        "on-primary-fixed": "#131f00",
+                        "surface-container": "#f1ede7",
+                        "background": "#fdf9f3",
+                        "surface-tint": "#50652a",
+                        "on-surface": "#1c1c18",
+                        "secondary-fixed": "#d5e9c2",
+                        "primary": "#3e5219",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#ebe8e2",
+                        "tertiary-container": "#6d634d",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-background": "#1c1c18",
+                        "on-primary-container": "#d0eba1",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#586a4b",
+                        "inverse-surface": "#31302d",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e6e2dc",
+                        "secondary-container": "#d5e9c2",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#221b0a",
+                        "on-secondary-fixed": "#111f07",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f7f3ed",
+                        "inverse-on-surface": "#f4f0ea",
+                        "secondary": "#526345",
+                        "on-surface-variant": "#45483c",
+                        "tertiary-fixed-dim": "#d3c5ab",
+                        "primary-fixed-dim": "#b6d088",
+                        "surface-variant": "#e6e2dc",
+                        "inverse-primary": "#b6d088",
+                        "surface-bright": "#fdf9f3",
+                        "on-tertiary-fixed-variant": "#4f4632",
+                        "outline": "#75796b",
+                        "surface-dim": "#dddad4",
+                        "on-tertiary-container": "#eee0c5",
+                        "primary-container": "#556b2f",
+                        "on-secondary-fixed-variant": "#3b4b2f",
+                        "surface": "#fdf9f3",
+                        "outline-variant": "#c5c8b8",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#b9cda7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .font-noto-serif { font-family: 'Noto Serif', serif; }
+        .font-manrope { font-family: 'Manrope', sans-serif; }
+        .product-card-reveal {
+            transition: transform 1.2s cubic-bezier(0.2, 0, 0.2, 1), opacity 1.2s cubic-bezier(0.2, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body overflow-x-hidden selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fdf9f3]/80 dark:bg-[#1c1c18]/80 backdrop-blur-xl flex justify-between items-center px-6 md:px-12 py-6 w-full">
+<div class="text-2xl font-normal text-[#3e5219] dark:text-[#fdf9f3] font-noto-serif">The Olfactory Gallery</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="text-[#3e5219] dark:text-[#fdf9f3] font-semibold border-b border-[#3e5219]/20 font-noto-serif tracking-widest lowercase hover:text-[#3e5219] transition-colors duration-500" href="#">Collections</a>
+<a class="text-[#544b37] dark:text-[#c5c8b8] font-noto-serif tracking-widest lowercase hover:text-[#3e5219] transition-colors duration-500" href="#">About</a>
+</div>
+<div class="flex items-center space-x-6">
+<button class="text-[#3e5219] font-noto-serif tracking-widest lowercase hover:text-[#3e5219] transition-colors duration-500">Shop</button>
+<span class="material-symbols-outlined text-[#3e5219]">shopping_bag</span>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="L'Essence de la Terre Background" class="w-full h-full object-cover brightness-95 opacity-90" data-alt="Dreamy atmospheric shot of morning mist over a botanical garden with soft sunlight filtering through eucalyptus trees, muted earth tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAysYdecOiKxAEQJ_ryHWW5kmuABThVhamyDKs1nXVogkn1DxqZRuzctSzdewyagFzAHWp2VtoSEb216tNHsB8PzCCaMQ56VkAkB8jCL8B2-s60OvMlDF7ApHJno4q1LzRXoLH5VbKBhQeAXTLywmbksO9m8i_haMOwi9y8ngqrGRebtRzYXEI4N9tmWkzZhJjACTFbBHRl93AvqCmP1wj8FeVZEizKo05NAraYFTeUGg21p5umxnVpq_0pdB4aCZiAnN87CZlgpN4"/>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/10 to-background"></div>
+</div>
+<div class="relative z-10 text-center max-w-4xl px-6">
+<h1 class="text-5xl md:text-8xl font-headline font-light tracking-tighter text-primary leading-tight mb-8">
+                L'Essence de la Terre
+            </h1>
+<p class="text-lg md:text-xl font-body text-tertiary mb-12 tracking-wide max-w-xl mx-auto font-light leading-relaxed">
+                A sensory journey through the hidden whispers of the earth. Captured in glass, preserved for the soul.
+            </p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<button class="bg-primary text-on-primary px-10 py-4 rounded-lg tracking-widest uppercase text-xs font-semibold hover:bg-primary-container transition-all duration-300">
+                    Explore the Collection
+                </button>
+<button class="text-primary px-10 py-4 rounded-lg tracking-widest uppercase text-xs font-semibold border border-primary/20 hover:bg-primary/5 transition-all duration-300">
+                    Our Story
+                </button>
+</div>
+</div>
+</section>
+<!-- Collection Showcase -->
+<section class="py-48 px-6 md:px-12 bg-surface">
+<div class="max-w-[1400px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-baseline mb-32 gap-8">
+<div class="max-w-xl">
+<span class="text-[10px] uppercase tracking-[0.5em] text-secondary font-bold block mb-4">Curated Exhibition</span>
+<h2 class="text-5xl md:text-6xl font-headline text-primary font-light">The Earth Collection</h2>
+</div>
+<a class="group flex items-center gap-4 text-tertiary text-xs uppercase tracking-[0.3em] font-bold hover:text-primary transition-colors" href="#">
+<span>View All Series</span>
+<span class="material-symbols-outlined text-lg transition-transform duration-500 group-hover:translate-x-2">arrow_right_alt</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-x-12 gap-y-32">
+<!-- Item 1 - Portrait (Left) -->
+<div class="md:col-span-5 group">
+<div class="relative aspect-[3/4.5] overflow-hidden rounded-sm bg-surface-container mb-10 transition-all duration-[1500ms] cubic-bezier(0.2, 0, 0.2, 1) group-hover:shadow-2xl">
+<img alt="Santal &amp; Moss" class="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105" data-alt="Minimalist luxury perfume bottle with a wooden cap standing on a raw stone surface, soft botanical shadows on background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7weiUYgJTCLKLGFwwSFzpQFaDo0mchx4b22ZJPRQ4DFD25MR-3HmgDdW4vkH6aBjuX7HnWgk2tpX-ul5wJgRpvGgciQmuTLN8T2HrAfcPUGezXC9erL6kGTvtt1SC9N2Fwlm7fuXDleb299QhAeuh0hYPC0n5NCofdRGIPB5peNkwLY1aAtR6NMCIVjyJkll-rK1eL3bjhf42zU2KJX66Z8GmzV27fgyo5qxbcO0TIQKAb0VLkb8ghG-bAfVRBSoh2YFki-_UylU"/>
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+</div>
+<div class="flex justify-between items-end border-b border-outline-variant/20 pb-6">
+<div>
+<span class="text-[9px] uppercase tracking-[0.4em] text-outline mb-2 block font-bold">Series 01</span>
+<h3 class="font-headline text-3xl text-primary mb-3">Santal &amp; Moss</h3>
+<p class="text-[10px] text-tertiary font-bold uppercase tracking-[0.25em]">Earth • Cedar • Dew</p>
+</div>
+<span class="text-xl font-noto-serif text-secondary">$240</span>
+</div>
+</div>
+<!-- Spacer Column for Editorial Feel -->
+<div class="hidden md:block md:col-span-1"></div>
+<!-- Item 2 - Landscape (Right, Offset Down) -->
+<div class="md:col-span-6 md:mt-64 group">
+<div class="relative aspect-[1.4/1] overflow-hidden rounded-sm bg-surface-container mb-10 transition-all duration-[1500ms] cubic-bezier(0.2, 0, 0.2, 1) group-hover:shadow-2xl">
+<img alt="Amber Horizon" class="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-110" data-alt="Elegant glass perfume bottle with gold detailing on a warm beige fabric background, soft focus, high-end editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6O8hEwgUf7LPT4jR-zlg33YToF7q_aBVBae-TY_Yr5HgMgP3DUtg4SdSk4dosaH_aoYeKtFfztQr2yXvbz2Cu-Wf1fYY0ztyXBDTElDkiKGCTFmhQ-iNz2Z5PfWfB-Jbbd8KZ4K8HyTiNAhOqG4gtSauFqNgHKH8hSjEJs5ZzotNCAKoFvgqD8FXgK62AKd7CoHK-iXnzZMXb-E_KJWj3B_x3vgWkN2aKgnocnduIYyR2PLGqy9O4VyRdZP6F-xSj3oVm2s7lKFk"/>
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+</div>
+<div class="flex justify-between items-end border-b border-outline-variant/20 pb-6 max-w-lg">
+<div>
+<span class="text-[9px] uppercase tracking-[0.4em] text-outline mb-2 block font-bold">Series 02</span>
+<h3 class="font-headline text-3xl text-primary mb-3">Amber Horizon</h3>
+<p class="text-[10px] text-tertiary font-bold uppercase tracking-[0.25em]">Resin • Saffron • Sun</p>
+</div>
+<span class="text-xl font-noto-serif text-secondary">$215</span>
+</div>
+</div>
+<!-- Item 3 - Portrait (Center-Right) -->
+<div class="md:col-start-4 md:col-span-5 group md:-mt-32">
+<div class="relative aspect-[3/4] overflow-hidden rounded-sm bg-surface-container mb-10 transition-all duration-[1500ms] cubic-bezier(0.2, 0, 0.2, 1) group-hover:shadow-2xl">
+<img alt="Wild Iris" class="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105" data-alt="Chic perfume bottle with black label amongst dried wildflowers and organic linen, artistic still life, warm muted lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD28UQ82uv1417nol8QzaVMD7PZOBhHbbU6UlYb_54cyi6u_BW27eJXrJgxAIWZwW9LYaZE2G_duY6omb_1WmmXaz4bsZqEcJbBCGUJAVKMZQpBW16WC9rW5dOMkRHCfLPXrZCivpAkO8afR69TXCR7atvr0DkS-KTKUq4Hiq-BgoAcI90d80roPK5NPzkh8H-lYD74MgiXSnWpyYOjZVPVrE08HVifhuOsvQPJaG4sujMizZ1uAxF9L8iyZDM48Yde-F6ABFKIzxs"/>
+<div class="absolute inset-0 bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+</div>
+<div class="flex justify-between items-end border-b border-outline-variant/20 pb-6">
+<div>
+<span class="text-[9px] uppercase tracking-[0.4em] text-outline mb-2 block font-bold">Series 03</span>
+<h3 class="font-headline text-3xl text-primary mb-3">Wild Iris</h3>
+<p class="text-[10px] text-tertiary font-bold uppercase tracking-[0.25em]">Petal • Roots • Rain</p>
+</div>
+<span class="text-xl font-noto-serif text-secondary">$195</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Brand Story (Asymmetric Bento) -->
+<section class="py-32 bg-surface-container-low overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-5 order-2 md:order-1">
+<span class="text-xs uppercase tracking-[0.3em] text-secondary font-semibold block mb-6">Our Philosophy</span>
+<h2 class="text-4xl md:text-6xl font-headline text-primary mb-8 leading-tight">The Art of Slow Extraction</h2>
+<div class="space-y-6 text-tertiary leading-relaxed text-lg font-light">
+<p>We believe fragrance is a living element. It should not be forced, but invited. Our process begins in the wild, sourcing rare resins and heirloom botanicals that carry the memory of the soil they grew in.</p>
+<p>Through traditional distillation and months of quiet maturation, we allow the natural molecules to weave together, creating complex olfactory tapestries that evolve uniquely on every skin.</p>
+</div>
+<div class="mt-12 flex flex-wrap gap-3">
+<span class="px-6 py-2 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold tracking-wider uppercase">Sustainably Sourced</span>
+<span class="px-6 py-2 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold tracking-wider uppercase">Small Batch</span>
+<span class="px-6 py-2 bg-secondary-container text-on-secondary-container rounded-full text-xs font-semibold tracking-wider uppercase">Cruelty Free</span>
+</div>
+</div>
+<div class="md:col-span-7 order-1 md:order-2 relative">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4 pt-12">
+<img alt="Artisan Process" class="rounded-xl w-full h-80 object-cover shadow-sm" data-alt="Close-up of artisan hands carefully handling raw botanicals and amber glass vials in a sunlit atelier" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP6Hd1V_pcYliBNpT4Cyqmr20loEBE1pFP2M9sfC_0lZqjMBZtaxgulA-bSlRYmpLDiDy8AfbA98OcBnt15QiA7HVEqeMnlsPdYBZ7jENLYhQN7WTF67P17_lWuuim4SSb7jUuV2KCevuMGDsV6rzDFeonFXRZ1W4tQPdLbTTQrN3_cB0vYC7xOc4lpyFuGZzxefmIZueR42QCy68drrOEhdV90oxZLryxx9-7OCCp1TBx3HchRsY9YCsxk7k0htZjEpcn1NzIl2o"/>
+<img alt="Ingredients" class="rounded-xl w-full h-64 object-cover shadow-sm" data-alt="Selection of organic perfume ingredients like vanilla pods, cinnamon sticks, and dried flowers on a weathered wooden table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq9quQ-TxhQI4YsfSYzhsoWy8_mDdaNTdHpAyDDpRyUqekfhj84fNDftRNQYRNOudDoqt7X20P9Smg_IyCLbRIW852Hh5wtVDSyNs18Gdnb84aTi9rhEgJh4OaqJZSwGh2Q2LwxEdvnbI37betxJ2TEv9nk1eYiMTApLmPZgI12LnOeNZolSvk_XtxWApLSFg-eH6pn99xMTo04p0Dxp0cvJF7j8UJH9IU46rn-EUqo3ONAx1A9HFITfrJQxtvUNR2BK18OgxYL4I"/>
+</div>
+<div class="space-y-4">
+<img alt="Collection Gallery" class="rounded-xl w-full h-full object-cover shadow-sm" data-alt="Vertical shot of luxury perfume bottles neatly arranged on a floating marble shelf with soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHqZYPxIvxJosbi1RwrDHLAc_qby6aY5trQ8LYId6pslYwq_ddiDmkhg9FAJjjOB4yku49mfXTa7rSk6OVdNEqoqJWrkUSaBhHrUb4pF2f3SCbDNZKKIHa_8vwY-RwUvq9UqxJIVGFKrSShzpsgvP72__xvpJ-usD9u-VM_zHE4h_GUStKhoyVL-FNuJgSo3vo7AUvE3Z6ZqHKhEuatSPVMj7qvkinLs5XDTuW196GY72WJ6yDX2WfRyavuVmR2ulDJruf-sI98Cw"/>
+</div>
+</div>
+<div class="absolute -right-12 -bottom-12 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial Section -->
+<section class="py-40 bg-surface">
+<div class="max-w-4xl mx-auto px-6 text-center">
+<span class="material-symbols-outlined text-4xl text-primary-fixed-dim mb-8">format_quote</span>
+<blockquote class="text-3xl md:text-5xl font-headline italic text-primary leading-snug mb-10">
+                "L'Essence de la Terre doesn't just create perfume; they bottle moments of profound stillness. It is the new standard for the olfactory intellectual."
+            </blockquote>
+<cite class="not-italic block">
+<span class="text-xs uppercase tracking-[0.4em] text-secondary font-bold">Vogue Luxury Edition</span>
+</cite>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="py-32 px-6 md:px-12 bg-surface-container-high relative overflow-hidden">
+<div class="max-w-3xl mx-auto text-center relative z-10">
+<h2 class="text-3xl md:text-4xl font-headline text-primary mb-6">Exclusive Previews</h2>
+<p class="text-tertiary mb-12 font-light tracking-wide">Join our private circle for early access to seasonal distillations and private exhibition invites.</p>
+<form class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto">
+<div class="flex-grow">
+<label class="block text-[10px] uppercase tracking-widest text-tertiary mb-1 text-left font-semibold">Email Address</label>
+<input class="w-full bg-surface-container-highest border-b border-outline-variant/30 focus:border-primary focus:ring-0 px-4 py-4 text-sm font-light transition-colors placeholder:text-outline-variant/50" placeholder="curator@example.com" type="email"/>
+</div>
+<button class="md:self-end bg-primary text-on-primary px-8 py-4 rounded-lg text-xs uppercase tracking-widest font-bold hover:bg-primary-container transition-all" type="submit">
+                    Subscribe
+                </button>
+</form>
+</div>
+<div class="absolute top-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2"></div>
+<div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary/5 rounded-full blur-[100px] translate-x-1/2 translate-y-1/2"></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#f7f3ed] dark:bg-[#12120f] w-full py-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-12">
+<div class="space-y-6">
+<div class="text-lg font-normal text-[#3e5219] dark:text-[#fdf9f3] font-noto-serif">The Olfactory Gallery</div>
+<p class="font-manrope text-xs tracking-tighter text-[#544b37] uppercase leading-relaxed max-w-[200px]">
+                Curating nature's finest scents since 2024. Handcrafted in the hills of Grasse.
+            </p>
+</div>
+<div>
+<h4 class="font-manrope text-xs tracking-tighter uppercase text-[#3e5219] mb-6 font-bold">Discover</h4>
+<ul class="space-y-4">
+<li><a class="font-manrope text-xs tracking-tighter uppercase text-[#544b37] hover:text-[#3e5219] transition-all duration-300" href="#">Collections</a></li>
+<li><a class="font-manrope text-xs tracking-tighter uppercase text-[#544b37] hover:text-[#3e5219] transition-all duration-300" href="#">Sustainability</a></li>
+<li><a class="font-manrope text-xs tracking-tighter uppercase text-[#544b37] hover:text-[#3e5219] transition-all duration-300" href="#">Stockists</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-manrope text-xs tracking-tighter uppercase text-[#3e5219] mb-6 font-bold">Legal</h4>
+<ul class="space-y-4">
+<li><a class="font-manrope text-xs tracking-tighter uppercase text-[#544b37] hover:text-[#3e5219] transition-all duration-300" href="#">Privacy</a></li>
+<li><a class="font-manrope text-xs tracking-tighter uppercase text-[#544b37] hover:text-[#3e5219] transition-all duration-300" href="#">Terms</a></li>
+<li><a class="font-manrope text-xs tracking-tighter uppercase text-[#544b37] hover:text-[#3e5219] transition-all duration-300" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-manrope text-xs tracking-tighter uppercase text-[#3e5219] mb-6 font-bold">Follow</h4>
+<ul class="space-y-4">
+<li><a class="font-manrope text-xs tracking-tighter uppercase text-[#544b37] hover:text-[#3e5219] transition-all duration-300" href="#">Instagram</a></li>
+<li><a class="font-manrope text-xs tracking-tighter uppercase text-[#544b37] hover:text-[#3e5219] transition-all duration-300" href="#">Pinterest</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-12 mt-20 pt-8 border-t border-primary/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-manrope text-xs tracking-tighter uppercase text-[#544b37]">© 2024 The Olfactory Gallery. All rights reserved.</span>
+<div class="flex gap-8">
+<span class="material-symbols-outlined text-secondary text-sm">spa</span>
+<span class="material-symbols-outlined text-secondary text-sm">filter_vintage</span>
+<span class="material-symbols-outlined text-secondary text-sm">compost</span>
+</div>
+</div>
+</footer>
+</body></html>
