@@ -1,8 +1,3 @@
-Here’s a clean, professional **README section** you can use for your website:
-
----
-
-## 📖 README
 
 ### 🌐 Project Overview
 
